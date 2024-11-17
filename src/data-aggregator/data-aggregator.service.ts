@@ -52,7 +52,7 @@ export class DataAggregatorService {
   async getRequestedPayouts(userId: string) {
     // If we want the best performance, then making the Database do the calculations
     // is usually the best idea as to offload the task.
-    const paidOut = await this.transactionRepository
+    return await this.transactionRepository
       .createQueryBuilder('transaction')
       .select('transaction.userId', 'userId')
       .addSelect('SUM(transaction.amount)', 'totalPaidOut')
@@ -61,8 +61,6 @@ export class DataAggregatorService {
 
       .groupBy('transaction.userId')
       .getRawOne();
-    console.log(paidOut);
-    return paidOut;
   }
 
   @Cron('*/15 * * * * *')

@@ -5,14 +5,14 @@ import { DataAggregatorService } from './data-aggregator.service';
 export class DataAggregatorController {
   constructor(private readonly dataAggregatorService: DataAggregatorService) {}
 
-  // getDataForUser(@Param('user_id') user_id: string) {
-  @Get(':user_id')
-  getDataForUser(@Param('user_id') user_id: string) {
-    return this.dataAggregatorService.getDataForUser(user_id);
+  // getDataForUser(@Param('userId') userId: string) {
+  @Get(':userId')
+  getDataForUser(@Param('userId') userId: string) {
+    return this.dataAggregatorService.getDataForUser(userId);
   }
 
-  @Get('/payouts/:id')
-  getRequestedPayouts(@Param('user_id') user_id: string) {
-    return this.dataAggregatorService.getRequestedPayouts(user_id);
+  @Get('/payouts/:userId')
+  getRequestedPayouts(@Param('userId') userId: string) {
+    return this.dataAggregatorService.getRequestedPayouts(userId);
   }
 }
