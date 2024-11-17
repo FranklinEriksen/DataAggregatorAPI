@@ -20,6 +20,8 @@ I have decided to make a very simple API that does 2 things. <br>
    and I save this data to a local SQLite database in the repo.
 2. Expose 2 endpoints for the user to request and get aggregated data returned.
 
+The most relevant code can be found in the src/data-aggregator/data-aggregator.service.ts file.
+
 If you run the app, then you can call the 2 endpoints using:
 
 To get the aggregated data on the 074092 user, then you can call:

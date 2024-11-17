@@ -14,7 +14,6 @@ export class DataAggregatorService {
   ) {}
 
   async getDataForUser(userId: string) {
-    console.log('calling get data from user');
     const dataRows = await this.transactionRepository.findBy({
       userId: userId,
     });
