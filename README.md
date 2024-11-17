@@ -49,7 +49,7 @@ For example, with speed being a high concern, and load onto the Transaction API,
 then I would try and make a test setup where I ensured the microservice could handle a high load.
 
 Equally I would also make tests to ensure that the data I save in the database is always in the
-correct formated, and likewise retrieved in the correct format.
+correct formated, and likewise retrieved in the correct format, going through the API endpoints
 
 ## Future work
 
