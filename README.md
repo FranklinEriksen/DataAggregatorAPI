@@ -35,3 +35,30 @@ To get the aggregated payout data for 074092 user, then you can call:
 ```bash
 $ curl localhost:3000/data-aggregator/payouts/074092
 ```
+
+## Assumptions
+
+I have assumed that the Transaction API can be filtered by the createdAt variable.
+
+## Testing Strategy
+
+Seeing as we're given a lot of technical requirements when starting the challenge, then I would try
+and lean onto them for the testing setup.
+
+For example, with speed being a high concern, and load onto the Transaction API,
+then I would try and make a test setup where I ensured the microservice could handle a high load.
+
+Equally I would also make tests to ensure that the data I save in the database is always in the
+correct formated, and likewise retrieved in the correct format.
+
+## Future work
+
+Some ideas for future work on this project as I ran out of time:
+
+1. Swagger documentation for the API endpoints
+2. Load test of the Microservice with the database to ensure good response times.
+3. Investigate the size of the Transaction API database, and ensure it would still make sense to
+   cache everythig on our end.
+4. Swap out the SQLite database with something more scaleable, most likely Postgres setup.
+5. Depending on how the project would be used, then a REDIS cache in front of the Postgres would
+   also make it more scalable.
